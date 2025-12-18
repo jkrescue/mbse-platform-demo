@@ -1,0 +1,1394 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* 自定义滚动条样式 */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-gray-300::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 4px;
+}
+
+.scrollbar-thumb-gray-400::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+  border-radius: 6px;
+}
+
+.scrollbar-track-gray-100::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+  border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af;
+}
+
+.scrollbar-thin::-webkit-scrollbar-corner {
+  background-color: #f3f4f6;
+}
+
+/* 为表格容器优化滚动条样式 */
+.table-scroll-container {
+  scrollbar-width: auto;
+  scrollbar-color: #6b7280 #e5e7eb;
+}
+
+.table-scroll-container::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+}
+
+.table-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #6b7280;
+  border-radius: 8px;
+  border: 2px solid #f9fafb;
+  min-height: 40px;
+  min-width: 40px;
+}
+
+.table-scroll-container::-webkit-scrollbar-track {
+  background-color: #e5e7eb;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.table-scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #4b5563;
+}
+
+.table-scroll-container::-webkit-scrollbar-thumb:active {
+  background-color: #374151;
+}
+
+.table-scroll-container::-webkit-scrollbar-corner {
+  background-color: #e5e7eb;
+}
+
+/* 新增：增强的横向滚动条样式 */
+.scrollbar-horizontal-enhanced {
+  scrollbar-width: auto;
+  scrollbar-color: #4b5563 #f3f4f6;
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.scrollbar-horizontal-enhanced::-webkit-scrollbar {
+  height: 14px;
+  width: 14px;
+  background-color: #f3f4f6;
+}
+
+.scrollbar-horizontal-enhanced::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  min-width: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scrollbar-horizontal-enhanced::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.scrollbar-horizontal-enhanced::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+.scrollbar-horizontal-enhanced::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+
+.scrollbar-horizontal-enhanced::-webkit-scrollbar-corner {
+  background-color: #f3f4f6;
+  border-radius: 10px;
+}
+
+/* 确保滚动条始终可见 */
+.scrollbar-horizontal-enhanced::-webkit-scrollbar-track:horizontal {
+  visibility: visible !important;
+  display: block !important;
+}
+
+.scrollbar-horizontal-enhanced::-webkit-scrollbar-thumb:horizontal {
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* 配置抽屉滚动条样式优化 */
+.config-drawer-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db #f9fafb;
+}
+
+.config-drawer-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.config-drawer-scroll::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 6px;
+}
+
+.config-drawer-scroll::-webkit-scrollbar-track {
+  background-color: #f9fafb;
+  border-radius: 6px;
+}
+
+.config-drawer-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af;
+}
+
+/* ScrollArea 组件优化 */
+[data-radix-scroll-area-viewport] {
+  scrollbar-width: thin !important;
+  scrollbar-color: #d1d5db #f9fafb !important;
+}
+
+[data-radix-scroll-area-viewport]::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+[data-radix-scroll-area-viewport]::-webkit-scrollbar-thumb {
+  background-color: #d1d5db !important;
+  border-radius: 6px !important;
+}
+
+[data-radix-scroll-area-viewport]::-webkit-scrollbar-track {
+  background-color: #f9fafb !important;
+  border-radius: 6px !important;
+}
+
+[data-radix-scroll-area-viewport]::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af !important;
+}
+
+/* React Flow 血缘图边的动画效果 */
+@keyframes dash-flow {
+  0% {
+    stroke-dashoffset: 12;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes edge-pulse {
+  0%, 100% {
+    stroke-opacity: 0.8;
+  }
+  50% {
+    stroke-opacity: 1;
+  }
+}
+
+/* React Flow 自定义边样式 */
+.react-flow__edge.animated .react-flow__edge-path {
+  animation: dash-flow 2s linear infinite, edge-pulse 3s ease-in-out infinite;
+}
+
+/* 确保边标签可见 */
+.react-flow__edge-textbg {
+  fill: rgba(255, 255, 255, 0.9);
+}
+
+/* 确保边路径基础样式 */
+.react-flow__edge-path {
+  stroke-width: inherit;
+  stroke: inherit;
+}
+
+/* React Flow 边标签样式增强 */
+.react-flow__edge-text {
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* React Flow 小地图样式优化 */
+.react-flow__minimap {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* React Flow 控制面板样式优化 */
+.react-flow__controls {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.react-flow__controls-button {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.react-flow__controls-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* 追溯可视化连接模式样式 */
+#traceability-visualization-container {
+  transition: all 0.3s ease;
+}
+
+#traceability-visualization-container.connecting-mode {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 197, 253, 0.05) 100%);
+  border: 1px dashed rgba(59, 130, 246, 0.3);
+  border-radius: 8px;
+}
+
+#traceability-visualization-container.connecting-mode::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 8px;
+  animation: connecting-pulse 2s infinite;
+}
+
+@keyframes connecting-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.01);
+  }
+}
+
+/* React Flow 节点连接高亮效果 */
+.react-flow__node[data-connecting="true"] {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  border-color: #3b82f6 !important;
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+/* React Flow Handle 连接点hover效果 */
+.react-flow__handle {
+  transition: all 0.2s ease;
+}
+
+.react-flow__handle:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+  z-index: 20;
+}
+
+.react-flow__handle.connecting {
+  animation: handle-pulse 1s infinite;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+}
+
+@keyframes handle-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.8;
+  }
+}
+
+/* React Flow 连接线预览样式 */
+.react-flow__connection-line {
+  stroke: #3b82f6;
+  stroke-width: 2;
+  stroke-dasharray: 5,5;
+  animation: dash-flow 2s linear infinite;
+}
+
+/* React Flow 边选中状态样式 */
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #3b82f6 !important;
+  stroke-width: 3 !important;
+  filter: drop-shadow(0 2px 4px rgba(59, 130, 246, 0.3));
+}
+
+.react-flow__edge.selected .react-flow__edge-text {
+  background: #3b82f6 !important;
+  color: white !important;
+  border-color: #1e40af !important;
+}
+
+/* 数据连接区域样式 */
+[data-connection-zone="main"] {
+  position: relative;
+}
+
+[data-connection-zone="main"]::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+[data-connection-zone="main"]:hover::after {
+  box-shadow: inset 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+/* 追溯图容器测试ID样式 */
+[data-testid="traceability-canvas"] {
+  min-height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* React Flow 节点数据项端口样式优化 */
+.react-flow__handle[id*="-input"] {
+  background: #10b981 !important;
+  border: 2px solid white !important;
+}
+
+.react-flow__handle[id*="-output"] {
+  background: #f97316 !important;
+  border: 2px solid white !important;
+}
+
+.react-flow__handle[id="left"] {
+  background: #3b82f6 !important;
+  border: 2px solid white !important;
+}
+
+.react-flow__handle[id="right"] {
+  background: #ef4444 !important;
+  border: 2px solid white !important;
+}
+
+/* 子节点连接端口特殊样式 */
+.react-flow__handle[id*="-child-"][id*="-input"] {
+  background: #6366f1 !important;
+  border: 1px solid white !important;
+  width: 8px !important;
+  height: 8px !important;
+}
+
+.react-flow__handle[id*="-child-"][id*="-output"] {
+  background: #ec4899 !important;
+  border: 1px solid white !important;
+  width: 8px !important;
+  height: 8px !important;
+}
+
+/* 子节点数字ID标识样式 */
+.child-node-id-badge {
+  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.child-node-id-badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+}
+
+/* 连接点分组样式 */
+.connection-group-main .react-flow__handle {
+  border: 3px solid white !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.connection-group-data .react-flow__handle {
+  border: 1px solid white !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.connection-group-child .react-flow__handle {
+  border: 1px solid white !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* 子节点连接状态指示器 */
+.child-connection-indicator {
+  background: radial-gradient(circle, #6b7280 0%, #9ca3af 100%);
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+
+.child-connection-indicator.connected {
+  background: radial-gradient(circle, #10b981 0%, #059669 100%);
+  opacity: 1;
+  animation: connection-pulse 2s infinite;
+}
+
+@keyframes connection-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+/* 子节点div容器增强样式 */
+.child-node-container {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.child-node-container:hover {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.child-node-container.has-connections {
+  border-left: 3px solid #10b981;
+}
+
+.child-node-container.has-connections::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #10b981 0%, #059669 100%);
+  opacity: 0.7;
+}
+
+/* 导航高亮动画样式 */
+.navigation-highlight {
+  position: relative;
+  animation: highlight-pulse 2s ease-in-out;
+  z-index: 10;
+}
+
+.navigation-highlight::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  background: rgba(59, 130, 246, 0.1);
+  pointer-events: none;
+  animation: highlight-glow 3s ease-in-out forwards;
+}
+
+@keyframes highlight-pulse {
+  0%, 100% { 
+    transform: scale(1); 
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+  50% { 
+    transform: scale(1.02); 
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+}
+
+@keyframes highlight-glow {
+  0% { 
+    opacity: 1;
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.2);
+  }
+  100% { 
+    opacity: 0;
+    border-color: transparent;
+    background: transparent;
+  }
+}
+
+/* 依赖标签hover效果 */
+.dependency-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* 应用卡片增强样式 */
+.enhanced-app-card {
+  transition: all 0.3s ease;
+}
+
+.enhanced-app-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* 依赖区域分隔样式 */
+.dependency-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* 依赖标签改进样式 */
+.dependency-badge {
+  transition: all 0.2s ease-in-out;
+  border-radius: 6px;
+}
+
+.dependency-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 展开按钮动画 */
+.expand-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.expand-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+}
+
+/* 应用网格布局优化 */
+.app-grid-enhanced {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+@media (min-width: 1536px) {
+  .app-grid-enhanced {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* AppCenter Tab和工具栏响应式优化 */
+@media (max-width: 768px) {
+  .app-center-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .app-center-tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .app-center-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .app-center-toolbar {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .app-center-search {
+    width: 100% !important;
+    min-width: auto !important;
+  }
+}
+
+/* AppCenter 新布局优化 - 一行布局 */
+.app-center-unified-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .app-center-unified-layout {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+}
+
+/* Tab选项卡和搜索框组合布局 */
+.app-center-left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .app-center-left-section {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+/* 工具栏右侧布局优化 */
+.app-center-right-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.375rem;
+  justify-content: flex-start;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .app-center-right-section {
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+}
+
+/* Tab选项卡响应式优化 */
+.app-center-tabs-list {
+  grid-template-columns: repeat(3, 1fr);
+  width: auto;
+  gap: 0.25rem;
+  max-width: 24rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .app-center-tabs-list {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .app-center-tabs-list {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 20rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-center-tabs-list {
+    max-width: 22rem;
+  }
+}
+
+/* 搜索框响应式 */
+.app-center-search-box {
+  width: 12rem;
+}
+
+@media (max-width: 768px) {
+  .app-center-search-box {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-center-search-box {
+    width: 14rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .app-center-search-box {
+    width: 16rem;
+  }
+}
+
+/* 工具栏按钮间距优化 */
+.app-center-toolbar-button {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  height: 2rem;
+  min-width: fit-content;
+  white-space: nowrap;
+}
+
+/* 视图切换按钮组 */
+.app-center-view-toggle {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.app-center-view-toggle button {
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+/* 下拉菜单优化 */
+.app-center-dropdown {
+  min-width: 7rem;
+}
+
+/* 创建应用按钮特殊样式 */
+.app-center-create-button {
+  background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+  border: none;
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.app-center-create-button:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3);
+}
+
+/* 响应式布局断点优化 */
+@media (max-width: 1023px) {
+  .app-center-unified-layout {
+    align-items: stretch;
+  }
+  
+  .app-center-left-section {
+    width: 100%;
+  }
+  
+  .app-center-right-section {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* 确保Tab触发器文本不被截断 */
+.app-center-tab-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  padding: 0.5rem 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+@media (min-width: 640px) {
+  .app-center-tab-trigger {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* 图标和文本间距 */
+.app-center-tab-icon {
+  height: 0.75rem;
+  width: 0.75rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .app-center-tab-icon {
+    height: 1rem;
+    width: 1rem;
+  }
+}
+
+/* 边距和填充优化 */
+.app-center-container-padding {
+  padding: 1rem 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .app-center-container-padding {
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* 侧边栏响应式优化 */
+@media (max-width: 1024px) {
+  .sidebar-nav-label {
+    font-size: 0.8rem;
+  }
+  
+  .sidebar-nav-description {
+    font-size: 0.7rem;
+  }
+}
+
+/* Tab按钮响应式优化 */
+.tab-button-responsive {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 640px) {
+  .tab-button-responsive {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+  }
+  
+  .tab-button-responsive .tab-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+}
+
+/* 工具栏按钮组优化 */
+.toolbar-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .toolbar-button-group {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* 防止按钮内容重叠的通用样式 */
+.button-no-overlap {
+  min-width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 搜索框响应式优化 */
+.search-input-responsive {
+  min-width: 200px;
+  flex-shrink: 1;
+}
+
+@media (max-width: 768px) {
+  .search-input-responsive {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* 卡片内容优化间距 */
+.card-content-spacing {
+  padding: 1.5rem;
+}
+
+.card-content-spacing > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* 侧边栏导航优化样式 */
+.sidebar-nav-item {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  text-align: left;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  min-height: 3rem;
+  gap: 0.625rem;
+}
+
+.sidebar-nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.sidebar-nav-item.active {
+  background-color: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.sidebar-nav-content {
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.sidebar-nav-label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  margin-bottom: 0.125rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-nav-description {
+  font-size: 0.75rem;
+  line-height: 1;
+  opacity: 0.8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 导航图标样式优化 */
+.sidebar-nav-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+/* 确保导航菜单区域的滚动条样式 */
+.sidebar-nav-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.75rem 0.5rem;
+}
+
+.sidebar-nav-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-nav-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.sidebar-nav-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* 管理员功能区域样式 */
+.admin-feature-area {
+  border: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+/* 快速操作按钮动画 */
+.quick-operation-btn {
+  transition: all 0.2s ease-in-out;
+}
+
+.quick-operation-btn:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 健康状态指示器动画 */
+.health-indicator {
+  animation: health-pulse 2s ease-in-out infinite;
+}
+
+@keyframes health-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+/* 统计卡片hover效果 */
+.stats-card {
+  transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* 排行榜动画效果 */
+.ranking-item {
+  transition: all 0.2s ease;
+}
+
+.ranking-item:hover {
+  background: rgba(59, 130, 246, 0.05);
+  transform: translateX(4px);
+}
+
+/* 管理员专区折叠区域样式优化 */
+.admin-collapsible-header {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 50%, #f0f7ff 100%);
+}
+
+.admin-collapsible-header:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 50%, #e0f2fe 100%);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+.admin-collapsible-header.collapsed {
+  border-color: rgba(107, 114, 128, 0.2);
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 50%, #f9fafb 100%);
+}
+
+/* 折叠区域图标容器样式 */
+.admin-section-icon-container {
+  background: white;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.admin-collapsible-header:hover .admin-section-icon-container {
+  border-color: rgba(59, 130, 246, 0.2);
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.1);
+}
+
+/* 折叠内容区域动画 */
+.admin-collapsible-content {
+  animation: slideInFromTop 0.3s ease-out;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 全局折叠控制按钮样式 */
+.admin-global-collapse-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.admin-global-collapse-btn:hover {
+  background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+  border-color: rgba(30, 64, 175, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* 管理员区域分隔线样式 */
+.admin-section-divider {
+  border-top: 2px solid rgba(59, 130, 246, 0.1);
+  background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.1) 50%, transparent 100%);
+  height: 1px;
+  margin: 1.5rem 0;
+}
+
+/* 折叠区域计数标签样式 */
+.admin-section-count-badge {
+  background: white;
+  color: #1e40af;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.admin-collapsible-header:hover .admin-section-count-badge {
+  background: #f0f7ff;
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #1d4ed8;
+}
+
+/* 折叠状态指示器动画 */
+.collapse-indicator {
+  transition: transform 0.2s ease;
+}
+
+.collapse-indicator.collapsed {
+  transform: rotate(180deg);
+}
+
+/* Widget卡片在折叠区域中的样式优化 */
+.admin-collapsible-content .widget-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.admin-collapsible-content .widget-card:hover {
+  border-color: rgba(59, 130, 246, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+/* 响应式折叠标题优化 */
+@media (max-width: 768px) {
+  .admin-collapsible-header {
+    padding: 0.75rem;
+  }
+  
+  .admin-section-icon-container {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  
+  .admin-section-icon-container svg {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+}
+
+/* 管理员专区整体容器样式 */
+.admin-console-container {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  min-height: 100%;
+}
+
+/* 折叠区域间的间距优化 */
+.admin-section-spacing {
+  margin-bottom: 2rem;
+}
+
+.admin-section-spacing:last-child {
+  margin-bottom: 0;
+}
